@@ -31,7 +31,7 @@ export default function Home({
 					) }
 			</Grid>
 			<Hero 
-			headline="Cookiess, Ice cream and Muffin"
+			headline="Cookies, Ice cream and Muffin"
 			description='Shortbread chupa chups liquorice fruitcake jelly sugar plum jelly beans candy fruitcake. Powder toffee jelly-o fruitcake brownie toffee oat cake. Dragée ice cream jujubes fruitcake sweet roll candy canes brownie apple pie. Icing dragée icing jujubes chocolate bar jelly-o sugar plum gummies. Macaroon icing tart marzipan carrot cake. Danish donut tootsie roll pie pastry tootsie roll dragée. Jelly beans candy shortbread pie sesame snaps sugar plum chocolate bar topping wafer.'
 			/>
 			<Marquee>
