@@ -1,6 +1,6 @@
 
 import type { InferGetStaticPropsType } from 'next'
-import getAllProducts from '@framework/product/get-all-products'
+import { getAllProducts } from "@framework/product"
 import { getConfig } from '@framework/api/config'
 import { Layout } from "@components/common"
 import { ProductCard } from '@components/product'
@@ -27,7 +27,7 @@ export default function Home({
 		<>
 			<Grid>
 				{ products.slice(0,3).map(product => 
-					<ProductCard key="product.id" product={product}/>
+					<ProductCard key={product.id} product={product}/>
 					) }
 			</Grid>
 			<Hero 
@@ -36,17 +36,17 @@ export default function Home({
 			/>
 			<Marquee>
 				{ products.slice(0,3).map(product => 
-					<ProductCard varient="slim" key="product.id" product={product}/>
+					<ProductCard varient="slim" key={product.id}product={product}/>
 					) }
 			</Marquee>
 			<Grid layout="B">
 				{ products.slice(0,3).map(product => 
-					<ProductCard key="product.id" product={product}/>
+					<ProductCard key={product.id} product={product}/>
 					) }
 			</Grid>
 			<Marquee variant={'secondary'}>
 				{ products.slice(0,3).map(product => 
-					<ProductCard varient="slim" key="product.id" product={product}/>
+					<ProductCard varient="slim" key={product.id} product={product}/>
 					) }
 			</Marquee>
 		</>

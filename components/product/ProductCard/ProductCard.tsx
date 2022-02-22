@@ -13,7 +13,6 @@ const placeholderImage = "/product-image-placeholder.svg"
 const ProductCard: FC<Props> = ({product, varient = "simple"}) => {
 
 
-
   return (
     <Link href={`/products/${product.slug}`}>
       <a className={s.root}>
