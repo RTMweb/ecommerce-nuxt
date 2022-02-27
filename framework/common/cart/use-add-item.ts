@@ -3,13 +3,13 @@ import { useHook } from '@common/utils/use-hooks'
 
 
  const useAddItem = () => {
-   debugger
    const hook = useHook((hooks) => {
-    debugger 
-    hooks.cart.useAddItem
+    return hooks.cart.useAddItem
   })
-   debugger
-  return hook.useHook()
+   
+  return hook.useHook({
+    fetch: hook.fetcher
+  })
 }
 
 export default useAddItem
