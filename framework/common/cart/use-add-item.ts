@@ -1,5 +1,6 @@
 
-import { useHook } from '@common/utils/use-hooks' 
+
+import { useHook, useMutationHook } from '@common/utils/use-hooks' 
 
 
  const useAddItem = () => {
@@ -7,9 +8,7 @@ import { useHook } from '@common/utils/use-hooks'
     return hooks.cart.useAddItem
   })
    
-  return hook.useHook({
-    fetch: hook.fetcher
-  })
+  return useMutationHook({...hook})
 }
 
 export default useAddItem

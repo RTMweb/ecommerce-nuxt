@@ -1,9 +1,11 @@
 import { ApiProvider } from './../../shopify/index';
 
-export type Variables = {[key: string]: string | undefined}
+export type Variables = {
+  [key: string]: string | undefined | any
+}
 
 export type ApiFetcherOptions = {
-  url: string
+  
   query: string
   variables?: Variables
 }
@@ -13,13 +15,13 @@ export type ApiFetcherResults<T> = {
 }
 
 export interface ApiConfig {
-  apiUrl: string
-  fetcher: ApiFetcher
+  fetch<T>(options: ApiFetcherOptions): Promise<ApiFetcherResults<T>>
 }
 
 export interface ApiHooks {
   cart: {
-    useAddItem: any
+    useAddItem: any,
+    useCart:any
   }
 }
 
